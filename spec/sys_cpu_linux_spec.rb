@@ -18,13 +18,13 @@ RSpec.describe Sys::CPU, :linux => true do
 
   example "load average works as expected" do
     expect{ Sys::CPU.load_avg }.not_to raise_error
-    expect(Sys::CPU.load_avg.length).to eq(7)
+                 expect(Sys::CPU.load_avg.length).to eq(7)
   end
 
   example "cpu_stats works as expected" do
     expect{ Sys::CPU.cpu_stats }.not_to raise_error
     expect(Sys::CPU.cpu_stats).to be_kind_of(Hash)
-    expect(Sys::CPU.cpu_stats['cpu0'].length).to be >= 9
+               expect(Sys::CPU.cpu_stats['cpu0'].length).to be >= 9
   end
 
   example "architecture works as expected" do

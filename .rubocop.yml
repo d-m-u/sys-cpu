@@ -1,0 +1,10 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - '.github/**/*'
+    - 'bin/{rails,rake}'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
