@@ -31,8 +31,8 @@ jobs:
     - name: Echo file changes
       run: |
         echo Changed files: ${{ steps.get_file_changes.outputs.files }}
-    - name: Run lint
-      uses: dorner/lint-action@v1.3.3
+    - name: Run linters
+      uses: wearerequired/lint-action@v1
       with:
         github_token: ${{ secrets.github_token }}
         rubocop: true
