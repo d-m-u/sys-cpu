@@ -35,7 +35,6 @@ jobs:
       uses: dorner/lint-action@v1.3.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        rubocop_bundler: true
+        rubocop: true
         auto_fix: true
-        rubocop_bundler_args: -R --fail-level C ${{ steps.get_file_changes.outputs.files}}
-
+        rubocop_args: -R --fail-level C ${{ steps.get_file_changes.outputs.files}}
