@@ -37,4 +37,4 @@ jobs:
         github_token: ${{ secrets.github_token }}
         rubocop: true
         auto_fix: true
-        rubocop_args: -R --fail-level C ${{ steps.get_file_changes.outputs.files}}
+        rubocop_args: --fail-level C ${{ steps.get_file_changes.outputs.files}}
